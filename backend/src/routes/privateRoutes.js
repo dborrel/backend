@@ -9,7 +9,7 @@ const router = express.Router();
 router.post('/create', createPrivateGame);
 router.post('/getPrivateGame', getPrivateGame);
 router.post('/join', joinPrivateGame);
-router.post('/delete/:id', deletePrivateGame);
+router.delete('/delete/:id', deletePrivateGame);
 router.get('/players/:gameId', getPlayers);
 router.post('/ready', isReady);
 router.get('/allPlayers/:gameId', getAllPlayers);
@@ -18,7 +18,7 @@ router.post('/uploadValues/:gameId', uploadValues)
 router.get('/getValues/:gameId', getValues); 
 router.get('/unfinished/:userId', getPrivateGamesUnfinished);
 router.get('/getGameWithCode/:gameCode', getGameWithCode);
-router.post('/deleteUserFromPrivate/:gameId/:userId', deleteUserFromPrivateGame); // No se si es necesario, pero lo dejo por si acaso
+router.delete('/deleteUserFromPrivate/:gameId/:userId', deleteUserFromPrivateGame); // No se si es necesario, pero lo dejo por si acaso
 router.post('/startPrivateGame', startPrivateGame);
 router.post('/pausePrivateGame', pausePrivateGame); // No se si es necesario, pero lo dejo por si acaso
 
